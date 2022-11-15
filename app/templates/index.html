@@ -1,0 +1,10 @@
+{% extends 'layout.html' %} {% block title %}Index{% endblock %} {% block
+content %}
+<h1>Seja bem-vindo {{user.username}}!</h1>
+
+<a href="/add">Add</a>
+<a href="/auth/login">Login</a>
+<a href="/auth/register">Register</a>
+<a href="/auth/logout">Logout</a>
+
+{% endblock %}

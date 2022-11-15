@@ -1,0 +1,13 @@
+.env
+env
+venv
+migrations
+*.db
+*pycache*
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info
+*.egg
+*.sqlite3
