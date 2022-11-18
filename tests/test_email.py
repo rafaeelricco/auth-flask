@@ -3,7 +3,6 @@ from tests.fixtures import app
 from tests.test_auth import user_test_data
 from itsdangerous import URLSafeTimedSerializer
 from app.models.base import User
-from flask import make_response, jsonify
 
 secret_key = URLSafeTimedSerializer(os.getenv("SECRET_KEY"))
 
@@ -45,11 +44,6 @@ def test_token_confirmation(client):
         return print(
             "Email not confirmed, maybe the token is invalid or you are already confirmed"
         )
-
-
-# @login_manager.user_loader
-# def load_user(user_id):
-#     return User.query.get(int(user_id))
 
 
 def test_load_user(client):
