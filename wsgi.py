@@ -1,12 +1,10 @@
 import os
-
 from dotenv import load_dotenv
-
 from app.factory import create_app
 
-dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
-if os.path.exists(dotenv_path):
-    load_dotenv(dotenv_path)
+env = os.path.join(os.path.dirname(__file__), ".env")
+if os.path.exists(env):
+    load_dotenv(env)
 
 app = create_app("production")
 

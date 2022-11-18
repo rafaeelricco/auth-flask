@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-auth = Blueprint("auth", __name__)
+mail = Blueprint("mail", __name__)
 
 from . import base

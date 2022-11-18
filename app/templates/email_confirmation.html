@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Ativação de conta {% endblock %}
+
+{% block content %}
+
+<body>
+  <h1 class="confirm__title">
+    Olá, {{ username }}!
+  </h1>
+  <p class="confirm__pargh">
+    Sua conta no(a) <strong>Flask Login</strong> está quase pronta. Para ativá-la, por favor confirme o seu endereço de
+    email
+    clicando no link abaixo.
+  </p>
+  <button class="confirm__button">
+    <a href="{{ link }}" class="confirm__link">
+      Confirmar email
+    </a>
+  </button>
+  <p class="confirm__pargh">
+    Sua conta <strong>não será ativada até que seu email seja confirmado.</strong>
+    Se você não se cadastrou no(a) Flask Login recentemente, por favor ignore este email.
+  </p>
+
+</body>
+{% endblock %}

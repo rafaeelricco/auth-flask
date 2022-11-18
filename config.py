@@ -1,6 +1,9 @@
 import os
+from pathlib import Path
+from dotenv import load_dotenv
 
-from decouple import config
+env_path = Path(".") / ".env"
+load_dotenv(dotenv_path=env_path)
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -10,8 +13,7 @@ def create_sqlite_uri(database):
 
 
 class Config:
-    SECRET_KEY = config("SECRET_KEY")
-    SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+    SECRET_KEY = os.getenv("SECRET_KEY")
     SQLALCHEMY_RECORD_QUERIES = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
